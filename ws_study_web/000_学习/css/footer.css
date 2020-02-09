@@ -1,0 +1,92 @@
+body,header,div,ul,li,a,input{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+body{
+    font: normal 14px sans-serif;
+}
+html{
+    width: 100%;
+    background: #f3f5f7;
+}
+body{
+    width: 100%;
+    font: normal 14px sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    font: normal 16px sans-serif;
+    text-decoration: none;
+    color: white;
+    transition: color 0.5s;
+}
+a:hover{
+    color: gray;
+}
+
+/*********************【begin footer】********************/
+.end{
+    /*margin-top: 10px;*/
+    width: 100%;
+    height: 200px;
+    background-color: #333333;
+}
+.end .final{
+    width: 1215px;
+    height: 150px;
+    background-color: #333333;
+    margin:auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.final-left{
+    width:45%;
+    height:150px ;
+    color: white;
+}
+.final-right{
+    width:45%;
+    height:130px ;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 20px 0px 0px 0px;
+}
+.final-right-one .right-one{
+    font-size: 16px;
+
+
+}
+.final-right-one .right-two{
+    margin-top: 20px;
+    font-size: 12px;
+
+}
+.final-right-one .right-two ul li{
+    width: 80%;
+    height: 25px;
+    color: gray;
+}
+.final-right-one .right-two ul li:hover{
+    cursor: pointer;
+    color: #55e1cc;
+}
+
+.final-right-two .final-right-img{
+    margin-top: 20px;
+
+}
+.final-right-two .final-right-img img:hover{
+    cursor: pointer;
+}
+.end-bottom{
+    width: 100%;
+    height: 50px;
+    color: gray;
+    text-align: center;
+}

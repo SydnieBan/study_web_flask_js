@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课件</title>
+    <link rel="stylesheet" href="css/courseware.css">
+
+</head>
+<body>
+
+<!--导航-->
+<header>
+    <div class="header">
+        <div class="header_left">
+            <div class="video_return" id="video_return">
+                <img src="./logo/video_return.svg" alt="">
+            </div>
+            <div class="video_title">
+                <h3><!--1-1 30万条数据准备情况--></h3>
+            </div>
+        </div>
+        <div class="header_right">
+            <div class="search">
+                <input type="text" class="search_text" id="search_text" placeholder="搜索你要的课程">
+                <input type="button" class="search_button" id="search_button" value="搜索">
+            </div>
+            <div class="login_no">
+                <a href="./login.html"><span>登录 | 注册</span></a>
+            </div>
+            <div class="login_yes">
+                <img src="http://pxebavmp1.bkt.clouddn.com/images/default_user_icon.png" id="login_yes_img"  alt="">
+                <div class="login_yes_h">
+                    <div class="login_yes_h_hr"></div>
+                    <div class="set">设置</div>
+                    <div class="login_yes_h_hr"></div>
+                    <div class="sign_out">退出</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="window-body">
+    <div class="left_nav" id="left_nav">
+        <div class="course_name" id="course_name">
+        </div>
+        <div class="divider"></div>
+        <div class="course_nav">
+            <ul id="show_list_ul">
+            </ul>
+        </div>
+    </div>
+    <div class="right_content" id="right_content">
+        <div class="small_title">
+            <div id="show_view">
+                <img src="./icon/work.svg" alt="" id="show_left" class="img_left">
+                <img src="./icon/question.svg" alt="" id="show_comment" class="img_comment">
+            </div>
+            <p class="top_title" id="top_title"></p>
+        </div>
+        <div class="content" id="article_area">
+        </div>
+    </div>
+    <div class="comment_area" id="comment_area">
+        <div class="comment_right_area">
+            <img src="./icon/close.svg" alt="" id="btn_close">
+            <div class="ca_title">
+                <h1>课件评论</h1>
+            </div>
+            <div class="btn_release_area">
+                <input type="button" value="我要发布" class="btn_release" id="btn_release">
+            </div>
+            <div class="comment_inner_area" id="comment_inner_area">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--模态框-->
+<div class="panel" id="panel">
+    <div class="center">
+        <div class="close_all" id="close">
+            <img src="./icon/modal_error.svg" alt="">
+        </div>
+        <h3>我要问答：</h3>
+        <div class="content" id="content">
+            <textarea name="content_eva" id="content_eva"></textarea>
+        </div>
+        <div class="btn_submit">
+            <input type="button" value="发布内容"  class="btn_sub" id="btn_sub">
+        </div>
+    </div>
+</div>
+
+
+<script src="js/ajax_util.js"></script>
+<script src="js/0_config.js"></script>
+<script src="js/courseware.js"></script>
+</body>
+</html>

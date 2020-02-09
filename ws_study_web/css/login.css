@@ -1,0 +1,191 @@
+body,html,div,ul,li,p,input{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    text-decoration: none;
+}
+input{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+.panel{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("http://pxebavmp1.bkt.clouddn.com/images/login_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.panel .center{
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -200px;
+    background: rgba(78, 78, 80, 0.29);
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+}
+/****************************login begin**********************/
+.panel .center  .user_login{
+    padding: 60px 50px 10px 50px;
+    /*background: #E9E9F2;*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.panel .center  .user_login p{
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-size: 23px;
+    padding:  0 0 0 100px;
+    margin-bottom: 10px;
+}
+.panel .center  .user_login .user{
+    width: 100%;
+    height: 30px;
+    border: none;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+.show_error{
+    width: 100%;
+    height: 20px;
+    padding:  0 10px;
+    box-sizing: border-box;
+    color: red;
+    /*opacity: 0;*/
+    /*background: #00de00;*/
+    margin-bottom: 3px;
+}
+.panel .center  .user_login .password{
+    width: 100%;
+    height: 30px;
+    border: none;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+.panel .center  .user_login .login{
+    width: 300px;
+    height: 30px;
+    margin-top: 8px;
+    margin-bottom: 13px;
+    border-radius: 10px;
+    background: whitesmoke;
+}
+.show_select{
+    padding: 0 0 0 220px;
+    width: 400px;
+    height: 20px;
+    box-sizing: border-box;
+}
+.zti {
+    font-size: 16px;
+    color: whitesmoke;
+}
+.re_style{
+    font-size: 14px;
+    color: whitesmoke;
+}
+.re_style:hover{
+    color: #ff4730;
+}
+/****************************login end**********************/
+
+/****************************register begin**********************/
+.panel .center  .user_register{
+    padding: 30px 50px 10px 50px;
+    /*background: #f21438;*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/*复用css*/
+.panel .center   p{
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-size: 23px;
+    padding:  0 0 0 120px;
+    margin-bottom: 10px;
+}
+.panel .center   .register_tel{
+    width: 300px;
+    height: 30px;
+    border: none;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+.panel .center   .register_pwd{
+    width: 100%;
+    height: 30px;
+    border: none;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+.panel .center   .register_chCode{
+    width: 75%;
+    height: 30px;
+    border: none;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+.panel .center   .get_verification_code{
+    width: 23%;
+    height: 30px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    background: whitesmoke;
+    outline: none;
+}
+.panel .center   .register{
+    width: 100%;
+    height: 30px;
+    margin-top: 3px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    background: whitesmoke;
+}
+/****************************register end**********************/
+/****************************retrieve_password end**********************/
+.panel .center .retrieve_password{
+    padding: 70px 50px 10px 50px;
+    /*background: #f21438;*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.panel .center  .retrieve_password p{
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-size: 23px;
+    padding:  0 0 0 100px;
+    margin-bottom: 10px;
+}
+.panel .center .active{
+    display: block;
+}
+.panel .center .no_active{
+    display: none;
+}
+
+
+/****************************retrieve_password end**********************/
+

@@ -1,0 +1,694 @@
+body,header,main,footer,div,ul,li,a,input,span,h3,h2,p,h1,button{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+html{
+    width: 100%;
+    background: #f3f5f7;
+}
+body{
+    width: 100%;
+    font: normal 14px sans-serif;
+}
+ul{
+    list-style: none;
+}
+
+a{
+    font: normal 16px sans-serif;
+    text-decoration: none;
+    color: white;
+    transition: color 0.5s;
+}
+a:hover{
+    color: gray;
+}
+/*********************【begin header】********************/
+header{
+    width: 100%;
+    height: 40px;
+    background: black;
+}
+header .header{
+    /*width: 95%;*/
+    width: 1215px;
+    /*min-width: 860px;*/
+    margin: 0 auto;
+    height: 40px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+}
+/* header_left */
+header .header .header_left{
+    width: 50%;
+    min-width: 460px;
+    height: 40px;
+    /*background: pink;*/
+    display: flex;
+    justify-content: flex-start;
+}
+header .header .header_left .logo_img{
+    height: 40px;
+    width: 200px;
+    /*background: red;*/
+    padding: 5px 0px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+header .header .header_left .logo_img>div{
+    height: 30px;
+    width: 200px;
+    background: gray;
+}
+header .header .header_left .logo_img>div:hover{
+    cursor: pointer;
+}
+header .header .header_left .nav{
+    height: 40px;
+    width: 400px;
+    /*background: #59ff59;*/
+}
+header .header .header_left .nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+header .header .header_left .nav ul li{
+    height: 40px;
+    width: 65px;
+    /*background: #7e99ff;*/
+    line-height: 40px;
+    text-align: center;
+}
+header .header .header_left .nav ul li a{
+    font-size: 16px;
+}
+/* header_right */
+header .header .header_right{
+    width: 35%;
+    min-width: 400px;
+    height: 40px;
+    /*background: yellow;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0px;
+    box-sizing: border-box;
+}
+header .header .header_right .search{
+    height: 30px;
+    width: 300px;
+    /*background: pink;*/
+    border: 2px solid black;
+    display: flex;
+    justify-content: flex-start;
+}
+header .header .header_right .search .search_text{
+    height: 30px;
+    width: 250px;
+    outline: none;
+}
+header .header .header_right .search .search_button{
+    height: 30px;
+    width: 50px;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.5s;
+}
+header .header .header_right .search .search_button:hover{
+    cursor: pointer;
+    color: gray;
+}
+/***********/
+/* 登录前 */
+header .header .header_right .login_no{
+    height: 34px;
+    width: 100px;
+    line-height: 34px;
+    text-align: center;
+    display: block;
+}
+header .header .header_right .login_no a{
+    font-size: 14px;
+}
+/***********/
+/* 登录后 */
+header .header .header_right .login_yes{
+    height: 34px;
+    width: 100px;
+    text-align: right;
+    display: none;
+}
+header .header .header_right .login_yes img{
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+}
+header .header .header_right .login_yes img:hover{
+    cursor: pointer;
+}
+header .header .header_right .login_yes .login_yes_h{
+    display: none;
+    width: 150px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.79);
+    position: relative;
+    text-align: left;
+    z-index: 1000;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    right: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header .header .header_right .login_yes:hover .login_yes_h{
+    display: flex;
+}
+header .header .header_right .login_yes .login_yes_h .login_yes_h_hr{
+    width: 130px;
+    height: 1px;
+    background-color: #b9b9b9;
+}
+header .header .header_right .login_yes .login_yes_h div:not([class='login_yes_h_hr']){
+    margin-left: 10px;
+    transition: color 0.5s;
+}
+header .header .header_right .login_yes .login_yes_h div:not([class='login_yes_h_hr']):hover{
+    cursor: pointer;
+    color: #a0b8ff;
+}
+/********************* end header ********************/
+
+.container{
+     width: 100%;
+ }
+.split {
+    width: 98%;
+    height: 1px;
+    margin:0 auto;
+    background: black;
+    opacity: 0.2;
+
+}
+.div01{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 999;
+    display: none;
+}
+.div01 .center{
+    width: 530px;
+    height:470px;
+    background-color: whitesmoke;
+    position: fixed;
+    top:25%;
+    left:50%;
+    margin:-125px 0 0 -300px;
+    z-index: 1000;
+}
+.div01 .center .content{
+    width: 520px;
+    height: 450px;
+    margin: 30px 10px 0px 5px;
+    box-sizing: border-box;
+}
+.div01 .center .content #advForm{
+    width: 520px;
+    height: 450px;
+    box-sizing: border-box;
+}
+.div01 .center .content #advForm>div{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+.div01 .center .content #advForm>div input{
+    width: 170px;
+    height: 32px;
+    border-radius:4px ;
+    border: 1px #dcdfe6;
+    display: inline-block;
+    outline: none;
+}
+.div01 .center .content #advForm select{
+    width: 170px;
+    height: 32px;
+    border-radius:4px ;
+    border: 1px #dcdfe6;
+    display: inline-block;
+    outline: none;
+}
+.div01 .center .content #advForm>div #ipt05{
+    width: 396px;
+    height: 60px;
+    outline: none;
+    font-size: 16px;
+    border: 1px #dcdfe6;
+    display: inline-block;
+}
+.div01 .center .btn_submit{
+    width: 530px;
+    height: 40px;
+    margin:-50px auto;
+}
+.div01 .center .btn_submit .btn_sub{
+    width:80px;
+    height: 40px;
+    /*padding: 10px;*/
+    margin-right: 10px;
+    margin-top: -10px;
+    box-sizing: border-box;
+    border: 0;
+    background: #ff6966;
+    outline:black;
+    border-radius: 4px;
+    color: white;
+    float: right;
+    cursor: pointer;
+}
+.div01 .center .close_all{
+    position: absolute;
+    top:5px;
+    right:5px;
+    width:15px;
+    height:15px;
+    font-size:15px;
+    cursor: pointer;
+}
+.panel{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 999;
+    display: none;
+}
+.panel .center{
+    width: 600px;
+    height: 250px;
+    background-color: whitesmoke;
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin:-125px 0 0 -300px;
+    z-index: 1000;
+    border-radius: 10px;
+}
+.panel .center .content{
+    width: 550px;
+    height: 150px;
+    margin: 25px 25px 15px 25px;
+    background: #cfcfcf;
+    box-sizing: border-box;
+}
+.panel .center .content input{
+    margin: 0px;
+    height: 150px;
+    width: 550px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+}
+.panel .center .btn_submit{
+    width: 550px;
+    height: 40px;
+    margin: auto;
+}
+.panel .center .btn_submit .btn_sub{
+    width:100px;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #ff4631;
+    outline:black;
+    /*border: none;*/
+    border-radius: 5px;
+    color: white;
+    float: right;
+    cursor: pointer;
+}
+.panel .center .close_all{
+    position: absolute;
+    top:5px;
+    right:5px;
+    width:15px;
+    height:15px;
+    font-size:15px;
+    cursor: pointer;
+}
+/* 页面主体 */
+.container main{
+    width: 1251px;
+    height: 530px;
+    margin: 0 auto;
+    margin-top: 40px;
+    /*background: #ff42d9;*/
+    box-shadow: 0 0 3px;
+    display: flex;
+}
+.container main .left {
+    width: 150px;
+    height:530px;
+    font-size:14px;
+    border-right:1px #dcdfe6 ;
+    line-height: 50px;
+}
+.container main .left>div:hover:not([class="selected"]){
+    cursor: pointer;
+    background: gray;
+}
+.selected{
+    background: gray;
+}
+.container main .col_split{
+    width: 1px;
+    height: 100%;
+    background: #dcdfe6;
+}
+.container main .right{
+    width: 1111px;
+    height:530px ;
+}
+.container main .right .personal_content{
+    width: 1111px;
+    height:530px ;
+    display:block;
+}
+.container main .right .personal_content .personal_top{
+    width: 1111px;
+    height: 100px;
+    /*background: #ed145b;*/
+    font-size: 20px;
+    line-height: 100px;
+}
+.container main .right .personal_content .personal_bottom{
+    width: 1111px;
+    height: 430px;
+    /*background: #5140ff;*/
+    display: flex;
+}
+.container main .right .personal_content .personal_bottom .left{
+    width: 150px;
+    height:430px ;
+    /*background: yellow;*/
+    text-align: center;
+}
+.container main .right .personal_content .personal_bottom .left img{
+    width: 100px;
+    /*width: 150px;*/
+    /*height: 150px;*/
+    height: 100px;
+    border-radius:50px
+}
+.container main .right .personal_content .personal_bottom .left img:hover{
+    cursor: pointer;
+    background: gray;
+}
+.container main .right .personal_content .personal_bottom .left .content{
+    margin-top: -20px;
+}
+.container main .right .personal_content .personal_bottom .right{
+    width: 961px;
+    height:430px;
+    /*background: #ff41bf;*/
+}
+.container main .right .personal_content .personal_bottom .right .top{
+    width: 961px;
+    height:100px;
+    /*background: #854cff;*/
+    display: flex;
+}
+main .right .personal_content .personal_bottom .right .top>div{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    /*background: yellow;*/
+    margin-left: 10px;
+    cursor: pointer;
+}
+.container main .right .personal_content .personal_bottom .right .bottom{
+    width: 961px;
+    height:330px ;
+    /*background: #00de00;*/
+}
+.personal_bottom .right .bottom .mod{
+    width:100px ;
+    height:40px ;
+    text-align: center;
+    line-height: 40px;
+    float: right;
+    margin-right: 10px;
+    color: #3399ea;
+    cursor: pointer;
+}
+.personal_bottom .right .bottom .common{
+    line-height: 40px;
+    height: 40px;
+}
+.container main .right .course_content{
+    width: 1110px;
+    height:530px;
+    display: none;
+}
+.container main .right .course_content .course_top{
+    width: 1111px;
+    height: 100px;
+    /*background: #ed145b;*/
+    font-size: 20px;
+    line-height: 100px;
+}
+.container main .right .course_content .up{
+    width: 100px;
+    height: 100px;
+    margin: 5px auto;
+    /*background: #ed145b;*/
+}
+.container main .right .course_content .up:hover{
+    cursor: pointer;
+}
+.container main .right .course_content .down{
+    width: 100px;
+    height: 100px;
+    margin: 5px auto;
+    /*background: #ed145b;*/
+}
+.container main .right .course_content .down:hover{
+    cursor: pointer;
+}
+.container main .right .course_content .bottom{
+    width: 1111px;
+    height: 210px;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container main .right .course_content #b02 #bo1{
+    width: 220px;
+    height: 210px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    background: white;
+
+}
+.container main .right .course_content #b02  #bo1 .content{
+    width: 220px;
+    height: 40px;
+    /*background: #ed145b;*/
+}
+.container main .right .course_content #b02>div:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    margin-bottom: 10px;
+}
+.container main .right .collect_course{
+    width: 1110px;
+    height:530px;
+    display: none;
+}
+.container main .right .collect_course .course_top{
+    width: 1111px;
+    height: 100px;
+    /*background: #ed145b;*/
+    font-size: 20px;
+    line-height: 100px;
+}
+.container main .right .collect_course .bottom{
+    width: 1111px;
+    height: 430px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.container main .right .collect_course .bottom .bottom-one{
+    width: 220px;
+    height: 210px;
+    margin-right: 2px;
+    margin-bottom: 10px;
+    background: white;
+
+}
+.container main .right .collect_course .bottom .bottom-one .content{
+    width: 220px;
+    height: 40px;
+    /*background: #ed145b;*/
+}
+.container main .right .collect_course .bottom>div:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    margin-bottom: 10px;
+}
+.container main .right .not_finished{
+    width: 1110px;
+    height:530px;
+    display: none;
+}
+.container main .right .not_finished .course_top{
+    width: 1111px;
+    height: 100px;
+    /*background: #ed145b;*/
+    font-size: 20px;
+    line-height: 100px;
+}
+.container main .right .not_finished .bottom{
+    width: 1111px;
+    height: 430px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.container main .right .not_finished .bottom .bottom-one{
+    width: 220px;
+    height: 210px;
+    margin-right: 2px;
+    margin-bottom: 10px;
+    background: white;
+
+}
+.container main .right .not_finished .bottom .bottom-one .content{
+    width: 220px;
+    height: 40px;
+    /*background: #ed145b;*/
+}
+.container main .right .not_finished .bottom>div:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    margin-bottom: 10px;
+}
+.container main .right .finished{
+    width: 1110px;
+    height:530px;
+    display:none ;
+}
+.container main .right .finished .course_top{
+    width: 1111px;
+    height: 100px;
+    /*background: #ed145b;*/
+    font-size: 20px;
+    line-height: 100px;
+}
+.container main .right .finished .bottom{
+    width: 1111px;
+    height: 430px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.container main .right .finished .bottom .bottom-one{
+    width: 220px;
+    height: 210px;
+    margin-right: 2px;
+    margin-bottom: 10px;
+    background: white;
+
+}
+.container main .right .finished .bottom .bottom-one .content{
+    width: 220px;
+    height: 40px;
+    /*background: #ed145b;*/
+}
+.container main .right .finished .bottom>div:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+    margin-bottom: 10px;
+}
+.container main .right .install{
+    width: 1110px;
+    height:530px;
+    display:none;
+}
+.container main .right .install .course_top{
+    width: 1111px;
+    height: 100px;
+    font-size: 20px;
+    line-height: 100px;
+}
+.container main .right .install  .content{
+    width: 1111px;
+    height: 143px;
+    display: flex;
+}
+.container main .right .install  .content .now_account{
+    width: 600px;
+    height: 140px;
+    line-height: 140px;
+}
+.container main .right .install  .content .change{
+    width: 300px;
+    height: 140px;
+    line-height: 140px;
+    display: flex;
+    color: #3399ea;
+    margin-left: 200px;
+}
+.change_telephone,.change_password,.change_two{
+    cursor: pointer;
+}
+.container main .right .install  .content .mail{
+    width: 1111px;
+    height: 140px;
+    line-height: 140px;
+    display: flex;
+}
+.container main .right .install  .content .mail .now_mail{
+    width: 600px;
+    height: 140px;
+    line-height: 140px;
+}
+.container main .right .install  .content .mail .change_two{
+    width: 200px;
+    height: 140px;
+    line-height: 140px;
+    text-align: center;
+    margin-left: 180px;
+    color: #3399ea;
+}
+.container main .right .install  #cons {
+    width: 1111px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+}
+.container main .right .install  #cons .icon{
+    width: 600px;
+    height: 50px;
+    line-height: 50px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+.container main .right .install  #cons .icon>div:hover{
+        cursor: pointer;
+        opacity: 0.5;
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="css/login.css">
+
+
+</head>
+<body>
+<div class="panel">
+    <div class="center">
+        <!-- 登录 -->
+        <div class="user_login" id="user_login">
+            <p>用户登录</p>
+            <form action="javascript:void 0"  method="">
+                <input type="text" name="telephone" placeholder="手机号" class="user" id="log_user_tel">
+                <div class="show_error" id="log_error_id"></div>
+                <input type="password" name="password" placeholder="密码" class="password" id="log_user_pwd" autocomplete>
+                <div class="show_error" id="log_error_pwd"></div>
+                <input type="checkbox" id="log_remPwd"><span class="zti">记住密码</span>
+                <input type="button" value="登录" class="login" id="log_btn">
+                <div class="show_error" id="is_login_success"></div>
+            </form>
+        </div>
+        <!-- 注册 -->
+        <div class="user_register no_active" id="user_register">
+            <p>注册</p>
+            <form action="javascript:void 0"  method="">
+                <input type="text" name="telephone"  placeholder="手机号" class="register_tel" id="register_tel">
+                <div class="show_error" id="res_error_id"></div>
+                <input type="password" name="first_pwd"  placeholder="密码" class="register_pwd" id="res_new_pwd" autocomplete>
+                <div class="show_error" id="res_new_pwd_error" ></div>
+                <input type="password" name="first_pwd"  placeholder="确认密码" class="register_pwd" id="res_pwd_again" autocomplete>
+                <div class="show_error" id="res_pwd_again_error"></div>
+                <input type="text" name="check_code" placeholder="输入验证码" class="register_chCode" id="res_check_code">
+                <input type="button" name="btn_check" value="发送验证码" class="get_verification_code" id="res_btn_check">
+                <div class="show_error" id="res_ck_code_error"></div>
+                <input type="button" value="注册" class="register" id="res_btn">
+                <div class="show_error" id="res_error"></div>
+            </form>
+        </div>
+        <!-- 忘记密码 -->
+        <div class="retrieve_password no_active" id="retrieve_password">
+            <p>找回密码</p>
+            <form action="javascript:void 0"  method="">
+                <input type="text" name="telephone"  placeholder="手机号" class="register_tel" id="rep_tel">
+                <div class="show_error"id="rep_tel_error"></div>
+                <input type="text" name="check_code" placeholder="输入验证码" class="register_chCode" id="rep_check_code">
+                <input type="button" name="btn_check" value="发送验证码" class="get_verification_code" id="rep_btn_check">
+                <div class="show_error" id="rep_ck_code_error"></div>
+                <input type="password" name="first_pwd"  placeholder="密码" class="register_pwd" id="rep_pwd" autocomplete>
+                <div class="show_error" id="rep_pwd_error"></div>
+                <input type="button" value="重置密码" class="register" id="rep_btn">
+                <div class="show_error" id="rep_btn_error"></div>
+            </form>
+        </div>
+        <!-- 选项 -->
+        <div class="show_select">
+            <span><a href="javascript:void 0" class="re_style" id="show_login">登录</a></span>
+            <span style="color: gainsboro">|</span>
+            <span><a href="javascript:void 0" class="re_style" id="show_register">去注册</a></span>
+            <span style="color: gainsboro">|</span>
+            <span><a href="javascript:void 0" class="re_style" id="show_find_Pwd">忘记密码</a></span>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/ajax_util.js"></script>
+<script src="js/0_config.js"></script>
+<script src="js/login.js"></script>
+
+</body>
+</html>

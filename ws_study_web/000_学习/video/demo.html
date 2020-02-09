@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>larkplayer quick start</title>
+
+</head>
+<body>
+<div id="container"></div>
+
+<!--larkplayer插件-->
+<script src="https://unpkg.com/larkplayer@latest/dist/larkplayer.js"></script>
+<!-- 自定义样式插件 https://github.com/dblate/larkplayer-ui -->
+<script src="https://unpkg.com/larkplayer-ui@latest/dist/larkplayer-ui.js"></script>
+<script type="text/javascript">
+    // js 文件以 umd 的形式包装，以 script 的形式引用时，larkplayer 会直接挂载在 window 上
+    var width = Math.min(document.body.clientWidth, 640);
+    var player = larkplayer('container', {
+        width: width,
+        height: width * 9 / 16,
+        controls: true,
+        src: 'https://baikebcs.bdimg.com/baike-other/big-buck-bunny.mp4'
+    },function () {
+        console.log('ready..');
+    });
+
+    player.currentTime('3:04');
+
+    // 支持所有的 html5 标准事件以及一些自定义事件
+    player.on('firstplay',function () {
+        console.log('firstplay');
+    });
+    player.on('play', function () {
+        console.log('play');
+    });
+    player.on('ended', function () {
+        console.log('end..!');
+    });
+
+    player.on('pause',function () {
+        console.log('pause...')
+    });
+
+    player.on('timeupdate',function () {
+        console.log('timeupdate');
+    });
+
+    player.on('loadstart',function () {
+        console.log('loadstart');
+    });
+
+    player.on('fullscreen',function () {
+        console.log('fullscreen');
+    });
+</script>
+</body>
+</html>

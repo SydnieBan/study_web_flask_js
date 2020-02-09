@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传图片</title>
+</head>
+<body>
+<form action="">
+    <input type="file" name="user_icon" id="user_icon">
+<!--    <div id="preview">-->
+<!--        <img src="" alt="" id="preview_img">-->
+<!--    </div>-->
+</form>
+<script src="../../js/0_config.js"></script>
+<script src="../../js/ajax_util.js"></script>
+<script src="../../js/qiniu.min.js"></script> <!-- 引入七牛云 -->
+<script>
+    var user={
+        id:17,
+        tel:"17864207686",
+        token:"cs"
+    };
+    document.querySelector('#user_icon').onchange=function (event) {
+
+        var local_file=event.target.files[0];
+        var local_file_name=local_file.name;
+        let server=ip_config+'/upload_token/';
+        ajax(server,{"local_file_name":local_file_name},'GET',null,function (res) {
+            let upload_token=res.upload_token;
+            let new_file_name=res.new_file_name;
+            let new_file=new File([local_file],new_file_name);
+            var config={
+                useCdnDomain: false, // 是否使用 cdn 加速域名，为布尔值，true 表示使用，默认为 false
+                disableStatisticsReport:true, // 是否禁用日志报告，为布尔值，默认为false
+                retryCount:6, // 上传自动重试次数（整体重试次数，而不是某个分片的重试次数）
+                region: qiniu.region.z2 // 选择上传域名区域；当为 null 或 undefined 时，自动分析上传域名区域
+            };
+            var putExtra = {
+                fname: "", // 文件原文件名
+                params: {}, // 用来放置自定义变量
+                mimeType: ["image/png", "image/jpeg", "image/gif"] // 限制上传文件类型
+            };
+            putExtra.params["x:name"]=new_file_name.split('.')[0];
+            // qiniu.upload 返回一个 observable 对象用来控制上传行为，同时返回一个 subscription 对象
+            var observable = qiniu.upload(local_file, new_file_name, upload_token, putExtra, config); // 上传的文件 + 文件资源名 + token + putExtra + config
+            // observable 对象通过 subscribe 方法可以被 observer 所订阅，订阅同时会开始触发上传
+            var subscription=observable.subscribe({
+                next(res){
+
+                },
+                error(res){
+                    console.log(res)
+                },
+                complete(res){
+                    alert('上传成功');
+                    // 调用ajax将文件名发给后台
+                     var qiniu_url=img_config;
+                    console.log(res);
+                }
+            });  // 上传开始
+
+        })
+    };
+    /* 预览图片 */
+    // function preview(file) {
+    //     var img=new Image();
+    //     img.src=URL.createObjectURL(file);
+    //     var url=img.src;
+    //     document.querySelector('#preview_img').src=url;
+    //     var $img=$(img);
+    //     img.onload=function () {
+    //         URL.revokeObjectURL(url);
+    //
+    //     }
+    // }
+</script>
+</body>
+</html>

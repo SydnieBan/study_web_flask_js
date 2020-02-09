@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击显示弹框</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .btn_login{
+            width: 100px;
+            height: 40px;
+            background: #ff4730;
+            color: black;
+        }
+        .panel{
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.5);
+            top: 0;
+            left: 0;
+            position: fixed;
+            z-index: 1000;
+            display: none;
+        }
+        .panel .center{
+            width: 600px;
+            height: 280px;
+            background-color: whitesmoke;
+            position: fixed;
+            top:50%;
+            left:50%;
+            margin:-200px 0 0 -310px;
+            z-index: 1000;
+            border-radius: 10px;
+        }
+        .panel .center .content{
+            width: 530px;
+            height: 150px;
+            margin: 50px 30px 20px 30px;
+            background: #cfcfcf;
+            box-sizing: border-box;
+        }
+        .panel .center .content textarea{
+            height: 150px;
+            width: 530px;
+            outline: none;
+            border: 1px solid #e1e1e1;
+        }
+        .panel .center .btn_submit{
+            width: 530px;
+            height: 40px;
+            margin: auto;
+        }
+        .panel .center .btn_submit .btn_sub{
+            width:100px;
+            height: 40px;
+            padding: 10px;
+            box-sizing: border-box;
+            background: #95c0ff;
+            outline: black;
+
+            /*border: none;*/
+            border-radius: 5px;
+            color: white;
+            float: right;
+            cursor: pointer;
+        }
+        .panel .center .close_all{
+            position: absolute;
+            top:20px;
+            right:30px;
+            width:15px;
+            height:15px;
+            font-size:15px;
+            cursor: pointer;
+        }
+        .panel .center .close_all img{
+            width: 20px;
+            height: 20px;
+        }
+        .panel .center h3{
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var btn_login=document.querySelector(".btn_login");
+            var panel=document.querySelector("#panel");
+            var close=document.querySelector("#close");
+            btn_login.onclick=function () {
+                panel.style.display="block";
+            };
+            close.onclick=function () {
+                panel.style.display="none";
+            };
+
+            var btn_sub=document.querySelector('#btn_sub');
+            var content_eva=document.querySelector('#content_eva');
+            btn_sub.onclick=function () {
+                let text=content_eva.value;
+                console.log({"content":text});
+                panel.style.display="none";
+                content_eva.value='';
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+    <button type="button" class="btn_login">login</button>
+</div>
+
+<div class="panel" id="panel">
+    <div class="center">
+        <div class="close_all" id="close">
+            <img src="../logo/modal_error.svg" alt="">
+        </div>
+        <h3>我要问答：</h3>
+        <div class="content" id="content">
+            <textarea name="content_eva" id="content_eva"></textarea>
+        </div>
+        <div class="btn_submit">
+            <input type="button" value="发布内容"  class="btn_sub" id="btn_sub">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

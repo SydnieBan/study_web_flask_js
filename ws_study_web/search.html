@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <link rel="stylesheet" href="css/search.css">
+
+</head>
+<body>
+<div class="container">
+    <!--导航-->
+    <header>
+        <div class="header">
+            <div class="header_left">
+                <div class="logo_img"><div></div></div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="./course.html">全部课程</a></li>
+                        <li><a href="./course_unique.html">精品课程 </a></li>
+                        <li><a href="./course_free.html">免费课程</a></li>
+                        <li><a href="./note.html">笔记专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_right">
+                <div class="search">
+                    <input type="text" class="search_text" id="search_text" placeholder="搜索你要的课程">
+                    <input type="button" class="search_button" id="search_button" value="搜索">
+                </div>
+                <div class="login_no">
+                    <a href="./login.html"><span>登录 | 注册</span></a>
+                </div>
+                <div class="login_yes">
+                    <img src="http://pxebavmp1.bkt.clouddn.com/images/default_user_icon.png" id="login_yes_img"  alt="">
+                    <div class="login_yes_h">
+                        <div class="login_yes_h_hr"></div>
+                        <div class="set">设置</div>
+                        <div class="login_yes_h_hr"></div>
+                        <div class="sign_out">退出</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--主体-->
+    <main>
+        <div class="top">
+            <div class="top_inner">
+                <div class="search">
+                    <input type="text" class="search_text" id="main_search_text">
+                    <input type="button" class="search_button" id="main_search_button" value="搜索">
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="center_inner">
+                <!--排序的最大容器-->
+                <div class="dis_sort">
+                    <input type="button" class="sort_btn_on" id="sort_btn_time" value="最新"/>
+                    <input type="button" class="sort_btn" id="sort_btn_select" value="按选课量"/>
+                    <input type="button" class="sort_btn" id="sort_btn_collection" value="按收藏量"/>
+                </div>
+                <!--课程的最大容器-->
+                <div class="dis_article" id="dis_article">
+<!--                    <div class="dis_article_c">-->
+<!--                        <div class="dis_article_c_inner">-->
+<!--                            <img src="./img/html_css_01.png" alt="">-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+                <!--页码最大容器-->
+                <div class="dis_page">
+                    <ul>
+                        <li><input class="input1" type="button" value="首页"></li>
+                        <li><input class="input1" type="button" value="上一页"></li>
+<!--                        <li><input type="button" value="1"></li>-->
+<!--                        <li><input type="button" value="2"></li>-->
+<!--                        <li><input type="button" value="3"></li>-->
+<!--                        <li><input type="button" value="4"></li>-->
+<!--                        <li><input type="button" value="5"></li>-->
+<!--                        <li><input type="button" value="6"></li>-->
+<!--                        <li><input type="button" value="7"></li>-->
+                        <li><input class="input1" type="button" value="下一页"></li>
+                        <li><input class="input1" type="button" value="尾页"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--底部-->
+    <footer class="end">
+        <div class="final">
+            <div class="final-left">
+                <div><h1><strong>LOGO</strong></h1></div>
+                <div>让每一名用户都能有所学，有所得..............</div>
+            </div>
+            <div class="final-right">
+                <div class="final-right-one">
+                    <div class="right-one">关于我们</div>
+                    <div class="right-two">
+                        <ul>
+                            <li>关于我们</li>
+                            <li>联系我们</li>
+                            <li>常见问题</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="final-right-two">
+                    <div>关注我们</div>
+                    <div class="final-right-img"><a href="https://wx.qq.com/"><img src="logo/微信.svg" alt="图片不存在"></a><a
+                            href="https://weibo.com"><img src="logo/weibo.svg" alt="图片不存在"></a>
+                    </div>
+                </div>
+                <div>友情链接</div>
+            </div>
+        </div>
+        <div class="end-bottom">
+            <span>粤B2-20090191-26  | 京ICP备12020869号-2 | 京公网安备44010602000207 </span><br/>
+            <span>©2014-2019 icourse163.org </span>
+        </div>
+    </footer>
+
+<script src="js/ajax_util.js"></script>
+<script src="js/0_config.js"></script>
+<script src="js/search.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>larkplayer quick start</title>
+</head>
+<body>
+
+
+<div id="video_container"></div>
+
+<!--larkplayer插件-->
+<script src="https://unpkg.com/larkplayer@latest/dist/larkplayer.js"></script>
+<!-- 自定义样式插件 https://github.com/dblate/larkplayer-ui -->
+<script src="https://unpkg.com/larkplayer-ui@latest/dist/larkplayer-ui.js"></script>
+<script>
+    var width=640;
+    // var width = Math.min(document.body.clientWidth, 640);
+    var player=larkplayer('video_container',{
+        width:width,
+        height: width*9/16,
+        controls: true,
+        src:  'https://baikebcs.bdimg.com/baike-other/big-buck-bunny.mp4'
+    },function () {
+        console.log('ready...');
+    })
+
+</script>
+
+</body>
+</html>

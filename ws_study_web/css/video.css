@@ -1,0 +1,536 @@
+body,header,main,footer,div,ul,li,a,input,span,h3,h2,h4,p{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+html{
+    width: 100%;
+    background: #f3f5f7;
+}
+body{
+    width: 100%;
+    font: normal 14px sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    font: normal 16px sans-serif;
+    text-decoration: none;
+    color: white;
+    transition: color 0.5s;
+}
+a:hover{
+    color: gray;
+}
+
+.container{
+    width: 100%;
+}
+/*********************【begin header】********************/
+header{
+    width: 100%;
+    height: 40px;
+    background: black;
+}
+header .header{
+    /*width: 95%;*/
+    width: 1251px;
+    /*min-width: 860px;*/
+    margin: 0 auto;
+    height: 40px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+}
+/* header_left */
+header .header .header_left{
+    width: 50%;
+    min-width: 460px;
+    height: 40px;
+    /*background: pink;*/
+    display: flex;
+    justify-content: flex-start;
+}
+header .header .header_left .video_return{
+    height: 40px;
+    width: 40px;
+    /*background: red;*/
+    padding: 5px 0;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+header .header .header_left .video_return img{
+    height: 30px;
+    width: 30px;
+}
+header .header .header_left .video_return img:hover{
+    cursor: pointer;
+}
+header .header .header_left .video_title{
+    height: 40px;
+    width: 400px;
+    line-height: 40px;
+    color: white;
+    font-size: 16px;
+}
+/* header_right */
+header .header .header_right{
+    width: 35%;
+    min-width: 400px;
+    height: 40px;
+    /*background: yellow;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0px;
+    box-sizing: border-box;
+}
+header .header .header_right .search{
+    height: 30px;
+    width: 300px;
+    /*background: pink;*/
+    border: 2px solid black;
+    display: flex;
+    justify-content: flex-start;
+}
+header .header .header_right .search .search_text{
+    height: 30px;
+    width: 250px;
+    outline: none;
+}
+header .header .header_right .search .search_button{
+    height: 30px;
+    width: 50px;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.5s;
+}
+header .header .header_right .search .search_button:hover{
+    cursor: pointer;
+    color: gray;
+}
+/***********/
+/* 登录前 */
+header .header .header_right .login_no{
+    height: 34px;
+    width: 100px;
+    line-height: 34px;
+    text-align: center;
+    display: block;
+}
+header .header .header_right .login_no a{
+    font-size: 14px;
+}
+/***********/
+/* 登录后 */
+header .header .header_right .login_yes{
+    height: 34px;
+    width: 100px;
+    text-align: right;
+    display: none;
+}
+header .header .header_right .login_yes img{
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+}
+header .header .header_right .login_yes img:hover{
+    cursor: pointer;
+}
+header .header .header_right .login_yes .login_yes_h{
+    display: none;
+    width: 150px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.79);
+    position: relative;
+    text-align: left;
+    z-index: 1000;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    right: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header .header .header_right .login_yes:hover .login_yes_h{
+    display: flex;
+}
+header .header .header_right .login_yes .login_yes_h .login_yes_h_hr{
+    width: 130px;
+    height: 1px;
+    background-color: #b9b9b9;
+}
+header .header .header_right .login_yes .login_yes_h div:not([class='login_yes_h_hr']){
+    margin-left: 10px;
+    transition: color 0.5s;
+}
+header .header .header_right .login_yes .login_yes_h div:not([class='login_yes_h_hr']):hover{
+    cursor: pointer;
+    color: #a0b8ff;
+}
+/********************* end header ********************/
+/********************* end header ********************/
+
+/*********************【begin main】********************/
+main{
+    width: 100%;
+    padding: 30px 0;
+}
+main  .main_inner{
+    width: 1251px;
+    margin: 0 auto;
+}
+main .video_div{
+    width: 1251px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+/* 视频左侧 */
+main .video_div .video_div_left{
+    width: 51px;
+    background: #535353;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+main .video_div .video_div_left .vdl_item{
+    width: 51px;
+    height: 60px;
+    padding: 15px 13px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+    opacity: 0.3;
+}
+main .video_div .video_div_left .vdl_item:hover{
+    opacity: 1;
+    cursor: pointer;
+    background-color: #737373;
+}
+main .video_div .video_div_left .vdl_item .vdl_item_img{
+    width: 25px;
+    height: 25px;
+}
+/*******************章节框*********************/
+main .video_div .video_div_left .chapter_panel{
+    /*width: 300px; !**!*/
+    height: 506px;
+    background-color: rgba(47, 47, 47, 0.89);
+    position: absolute;
+    left: 50px;
+    z-index: 1000;
+    width: 0;
+    /*display: none;!**!*/
+    transition: width 0.3s;
+}
+main .video_div .video_div_left .chapter_panel .chapter_panel_inner{
+    display: none;
+    width: 300px;
+    height: 500px;
+    padding:10px 10px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+main .video_div .video_div_left .chapter_panel .chapter_panel_inner h3{
+    color: white;
+    margin: 10px 0;
+}
+main .video_div .video_div_left .chapter_panel .chapter_panel_inner p{
+    width: 250px;
+    color: lightgray;
+    margin: 5px 0 5px 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+main .video_div .video_div_left .chapter_panel .chapter_panel_inner p:hover{
+    cursor: pointer;
+    color: #93bbed;
+}
+
+
+/**********************************************/
+/*******************模态框*********************/
+.panel{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+    display: none;
+}
+.panel .center{
+    width: 600px;
+    height: 280px;
+    background-color: whitesmoke;
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin:-200px 0 0 -310px;
+    z-index: 1000;
+    border-radius: 10px;
+}
+.panel .center .content{
+    width: 530px;
+    height: 150px;
+    margin: 50px 30px 20px 30px;
+    background: #cfcfcf;
+    box-sizing: border-box;
+}
+.panel .center .content textarea{
+    height: 150px;
+    width: 530px;
+    outline: none;
+    border: 1px solid #e1e1e1;
+}
+.panel .center .btn_submit{
+    width: 530px;
+    height: 40px;
+    margin: auto;
+}
+.panel .center .btn_submit .btn_sub{
+    width:100px;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    /*background: #7ef2ff;*/
+    background: #95c0ff;
+    outline: black;
+
+    /*border: none;*/
+    border-radius: 5px;
+    color: white;
+    float: right;
+    cursor: pointer;
+}
+.panel .center .close_all{
+    position: absolute;
+    top:20px;
+    right:30px;
+    width:15px;
+    height:15px;
+    font-size:15px;
+    cursor: pointer;
+}
+.panel .center .close_all img{
+    width: 20px;
+    height: 20px;
+}
+.panel .center h3{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+/**********************************************/
+
+
+/* 视频 */
+main .video_div #video{
+    width: 900px;
+    margin: 0 auto;
+    background-color: yellow;
+}
+
+/* 视频右侧 */
+main .video_div .video_div_right{
+    width: 300px;
+    background: #535353;
+    padding: 10px 10px;
+}
+main .video_div .video_div_right .vdr_close{
+    padding: 5px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+main .video_div .video_div_right .vdr_close img{
+    width: 15px;
+    height: 15px;
+}
+main .video_div .video_div_right .vdr_close img:hover{
+    cursor: pointer;
+}
+main .video_div .video_div_right .vdr_top{
+    padding: 5px 5px;
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+}
+main .video_div .video_div_right .vdr_top .vdr_top_img img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+main .video_div .video_div_right .vdr_top .vdr_top_name{
+    padding: 0 10px;
+}
+main .video_div .video_div_right .vdr_bottom{
+    padding: 10px 10px;
+    color: #e2e2e2;
+}
+main .video_div .video_div_right_hid{
+    width: 51px;
+    background: #535353;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 13px;
+    box-sizing: border-box;
+}
+main .video_div .video_div_right_hid img{
+    width: 25px;
+    height: 25px;
+}
+main .video_div .video_div_right_hid img:hover{
+    cursor: pointer;
+}
+
+/***** 导航 *****/
+main .main_inner .nav{
+    width: 1251px;
+    height: 50px;
+    background: white;
+}
+main .main_inner .nav .nav_inner{
+    width: 1215px;
+    margin: 0 auto;
+    height: 50px;
+    background: white;
+    line-height: 50px;
+}
+main .main_inner .nav .nav_inner ul{
+    display: flex;
+    justify-content: flex-start;
+}
+main .main_inner .nav .nav_inner ul li{
+    width: 200px;
+}
+main .main_inner .nav .nav_inner ul li a{
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+main .main_inner .nav .nav_inner ul li a:not([class]):hover{
+    color: #76dffa;
+}
+main .main_inner .nav .nav_inner ul li .selected{
+    color: #76dffa;
+}
+main .main_inner .nav .nav_inner ul li .selected:after{
+    content: "";
+    height: 5px;
+    width: 30px;
+    background-color: #76dffa;
+    display: block;
+    position: relative;
+    top: -10px;
+    left:2px;
+}
+/***问答****/
+main .main_inner .main_bottom{
+    width: 1251px;
+    display: flex;
+    justify-content: space-between;
+}
+main .main_inner .main_bottom .question{
+    width: 951px;
+}
+main .main_inner .main_bottom .question .que_top{
+    width: 951px;
+    height: 50px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+}
+main .main_inner .main_bottom .question .que_top .que_btn{
+    font-size: 18px;
+    background-color: #93bbed;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    outline: none;
+    border: 1px solid transparent;
+}
+main .main_inner .main_bottom .question .que_top .que_btn:hover{
+    cursor: pointer;
+}
+main .main_inner .main_bottom .question .que_container .que_article{
+    width: 951px;
+    border-radius: 10px;
+    padding: 20px 20px 10px 20px;
+    border: 1px solid #e2e2e2;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+main .main_inner .main_bottom .question .que_container .que_article .que_content{
+    display: flex;
+    justify-content: flex-start;
+}
+main .main_inner .main_bottom .question .que_container .que_article .que_content .que_icon img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+main .main_inner .main_bottom .question .que_container .que_article .que_content .que_text{
+    padding: 5px 20px;
+}
+main .main_inner .main_bottom .question .que_container .que_article .que_content .que_text h3{
+    margin-bottom: 5px;
+}
+main .main_inner .main_bottom .question .que_container .que_article .que_content .que_text p{
+    font-size: 16px;
+}
+main .main_inner .main_bottom .question .que_container .que_article .que_time{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+main .main_inner .main_bottom .recommend{
+    width: 300px;
+    padding: 10px 0 0 20px;
+    box-sizing: border-box;
+}
+main .main_inner .main_bottom .recommend .recommend_course{
+    height: 80px;
+    width: 280px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0;
+    transition: background-color 0.5s;
+}
+main .main_inner .main_bottom .recommend .recommend_course .img{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+main .main_inner .main_bottom .recommend .recommend_course .img img{
+    width: 80px;
+    height: 60px;
+    border-radius: 10px;
+}
+main .main_inner .main_bottom .recommend .recommend_course .text{
+    height: 60px;
+    padding: 14px 0 14px 5px;
+    color: #525252;
+    transition: color 0.5s;
+}
+main .main_inner .main_bottom .recommend .recommend_course .text:hover{
+    cursor: pointer;
+    color: black;
+}
+/**********/
+
+/********************* end main ********************/
+
+/*********************【begin footer】********************/
+footer{
+    width: 100%;
+}
+/********************* end footer ********************/

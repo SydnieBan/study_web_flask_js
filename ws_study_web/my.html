@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/my.css">
+</head>
+<body>
+<!-- 模态框-->
+<div class="div01" id="div01">
+    <div class="center">
+        <span class="close_all" id="exit">X</span>
+        <div class="content" id="div02">
+            <form action="" id="advForm">
+                <div class="name">
+                    <span>昵称:</span>
+                    <input type="text" id="ipt01" name="user_name">
+                </div>
+                <div class="sex">
+                    <span>性别:</span>
+                    <select id="sex" style="width: 170px;height: 30px;background:white">
+                        <option>
+                        <option value="1">男
+                        <option value="3">女
+                    </select>
+                </div>
+                <div class="status">
+                    <span>身份:</span>
+                    <input type="text" id="ipt03" name="identify">
+                </div>
+                <div class="address">
+                    <span>地址:</span>
+                    <input type="text" id="ipt04" name="address">
+                </div>
+                <div class="introduce">
+                    <span>简介:</span>
+                    <textarea cols="10" rows="8" id="ipt05" name="introduce"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="btn_submit">
+            <input type="button" value="确定" class="btn_sub" id="btn">
+        </div>
+    </div>
+</div>
+<!-- 模态框 -->
+<div class="panel" id="panel">
+    <div class="center">
+        <span class="close_all" id="close">X</span>
+        <div class="content" id="content">
+            <input name="content_eva" id="content_eva" type="file">
+            <span>点击灰色部分上传头像</span>
+        </div>
+        <div class="btn_submit">
+            <input type="button" value="确定"  class="btn_sub" id="btn_sub">
+        </div>
+    </div>
+</div>
+<!-- 页面 -->
+<div class="container">
+    <!--导航-->
+    <header>
+        <div class="header">
+            <div class="header_left">
+                <div class="logo_img"><div></div></div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="./course.html">全部课程</a></li>
+                        <li><a href="./course_unique.html">精品课程 </a></li>
+                        <li><a href="./course_free.html">免费课程</a></li>
+                        <li><a href="./note.html">笔记专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_right">
+                <div class="search">
+                    <input type="text" class="search_text" id="search_text" placeholder="搜索你要的课程">
+                    <input type="button" class="search_button" id="search_button" value="搜索">
+                </div>
+                <div class="login_no">
+                    <a href="./login.html"><span>登录 | 注册</span></a>
+                </div>
+                <div class="login_yes">
+                    <img src="http://pxebavmp1.bkt.clouddn.com/images/default_user_icon.png" id="login_yes_img"  alt="">
+                    <div class="login_yes_h">
+                        <div class="login_yes_h_hr"></div>
+                        <div class="set">设置</div>
+                        <div class="login_yes_h_hr"></div>
+                        <div class="sign_out">退出</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--主体-->
+    <main>
+        <div class="left">
+            <div class="personal">&nbsp&nbsp个人资料</div>
+            <div class="total">&nbsp&nbsp全部课程</div>
+            <div class="collect">&nbsp&nbsp收藏的课程</div>
+            <div class="on">&nbsp&nbsp未完成课程</div>
+            <div class="over">&nbsp&nbsp已结束课程</div>
+            <div class="account">&nbsp&nbsp账号设置</div>
+        </div>
+        <div class="col_split"></div>
+        <div class="right">
+            <div class="personal_content">
+                <div class="personal_top">&nbsp&nbsp个人资料</div>
+                <div class="split"></div>
+                <div class="personal_bottom">
+                    <div class="left" id="headers">
+                        <img src="http://pxebavmp1.bkt.clouddn.com/images/default_user_icon.png" alt="not found" id="user_img" >
+                        <div class="content">修改头像</div>
+                    </div>
+                    <div class="right">
+                        <div class="top">
+                            <div class="grade">
+                                <p>积分</p>
+                                <img src="./logo/my_integral.svg" alt="">
+                                <!--                              <p class="p01">235</p>-->
+                                <p class="p01"></p>
+                            </div>
+                            <div class="count">
+                                <p>笔记</p>
+                                <img src="./logo/my_note.svg" alt="">
+                                <!--                              <p class="p02">235</p>-->
+                                <p class="p02"></p>
+                            </div>
+                            <div class="time">
+                                <p>学习时长</p>
+                                <img src="./logo/my_studytime.svg" alt="">
+                                <p id="study_time">235</p>
+                            </div>
+                        </div>
+                        <div class="split"></div>
+                        <div class="bottom">
+                            <div class="mod" id="change">修改资料</div>
+                            <ul class="self">
+                                <li class="common">昵称:</li>
+                                <li class="common">性别:</li>
+                                <li class="common">身份:</li>
+                                <li class="common">地址:</li>
+                                <li class="common">简介:</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course_content">
+                <div class="course_top">&nbsp&nbsp全部课程</div>
+                <div class="split"></div>
+                <div class="up">
+                    <img src="logo/up.svg" alt="" style="width: 50px;height: 50px;">
+                </div>
+                <div class="bottom" id="b02">
+
+                </div>
+                <div class="down">
+                    <img src="logo/down.svg" alt="" style="width: 50px;height: 50px;">
+                </div>
+            </div>
+            <div class="collect_course">
+                <div class="course_top">&nbsp&nbsp收藏课程</div>
+                <div class="split"></div>
+                <div class="bottom" id="b03">
+                </div>
+            </div>
+            <div class="not_finished">
+                <div class="course_top">&nbsp&nbsp未完成课程</div>
+                <div class="split"></div>
+                <div class="bottom" id="b04">
+                </div>
+            </div>
+            <div class="finished">
+                <div class="course_top">&nbsp&nbsp&nbsp已结束课程</div>
+                <div class="split"></div>
+                <div class="bottom" id="b05">
+                </div>
+            </div>
+            <div class="install">
+                <div class="course_top">&nbsp&nbsp&nbsp账号设置</div>
+                <div class="split"></div>
+                <div class="content">
+                    <div class="now_account">
+                        <label>&nbsp&nbsp&nbsp当前登录账号:&nbsp&nbsp&nbsp</label>
+                        <span class="p03">无敌</span>
+                    </div>
+                    <div class="change">
+                        <div class="change_telephone">
+                            <span>&nbsp&nbsp&nbsp修改账号</span>
+                        </div>
+                        <div class="change_password">
+                            <span>&nbsp&nbsp&nbsp修改密码</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="split"></div>
+                <div class="content">
+                    <div class="mail">
+                        <div class="now_mail">
+                            <label>&nbsp&nbsp&nbsp当前邮箱账号:&nbsp&nbsp&nbsp</label>
+                            <span>1564156</span>
+                        </div>
+                        <div class="change_two">
+                            <span>修改邮箱</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="split"></div>
+                <div class="content" id="cons">
+                    <div class="icon">
+                        <div class="qq">
+                            <img src="./logo/my_qq.svg" alt="">
+                        </div>
+                        <div class="we_chat">
+                            <img src="./logo/my_weixin.svg" alt="">
+                        </div>
+                        <div class="wei_bo"><img src="./logo/my_weibo.svg" alt="">
+                        </div>
+                        <div class="email"><img src="./logo/my_email.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- 底部 -->
+    <footer></footer>
+</div>
+<script src="js/0_config.js"></script>
+<script src="js/ajax_util.js"></script>
+<script src="js/qiniu.min.js"></script>
+<script src="js/my.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    <link rel="stylesheet" href="css/my.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash; 模态框&ndash;&gt;-->
+<!--<div class="div01" id="div01">-->
+<!--    <div class="center">-->
+<!--        <span class="close_all" id="exit">X</span>-->
+<!--        <div class="content" id="div02">-->
+<!--            <form action="" id="advForm">-->
+<!--                <div class="name">-->
+<!--                    <span>昵称:</span>-->
+<!--                    <input type="text" id="ipt01" name="user_name">-->
+<!--                </div>-->
+<!--                <div class="sex">-->
+<!--                    <span>性别:</span>-->
+<!--                    <select id="sex" style="width: 170px;height: 30px;background:white">-->
+<!--                        <option>-->
+<!--                        <option value="1">男-->
+<!--                        <option value="3">女-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--                <div class="status">-->
+<!--                    <span>身份:</span>-->
+<!--                    <input type="text" id="ipt03" name="identify">-->
+<!--                </div>-->
+<!--                <div class="address">-->
+<!--                    <span>地址:</span>-->
+<!--                    <input type="text" id="ipt04" name="address">-->
+<!--                </div>-->
+<!--                <div class="introduce">-->
+<!--                    <span>简介:</span>-->
+<!--                    <textarea cols="10" rows="8" id="ipt05" name="introduce"></textarea>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--        <div class="btn_submit">-->
+<!--            <input type="button" value="确定" class="btn_sub" id="btn">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash; 模态框 &ndash;&gt;-->
+<!--<div class="panel" id="panel">-->
+<!--    <div class="center">-->
+<!--        <span class="close_all" id="close">X</span>-->
+<!--        <div class="content" id="content">-->
+<!--            <input name="content_eva" id="content_eva" type="file">-->
+<!--            <span>点击灰色部分上传头像</span>-->
+<!--        </div>-->
+<!--        <div class="btn_submit">-->
+<!--            <input type="button" value="确定"  class="btn_sub" id="btn_sub">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash; 页面 &ndash;&gt;-->
+<!--<div class="container">-->
+<!--    &lt;!&ndash;导航&ndash;&gt;-->
+<!--    <header>-->
+<!--        <div class="header">-->
+<!--            <div class="header_left">-->
+<!--                <div class="logo_img"><div></div></div>-->
+<!--                <div class="nav">-->
+<!--                    <ul>-->
+<!--                        <li><a href="./course.html">全部课程</a></li>-->
+<!--                        <li><a href="./course_unique.html">精品课程 </a></li>-->
+<!--                        <li><a href="./course_free.html">免费课程</a></li>-->
+<!--                        <li><a href="./note.html">笔记专栏</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="header_right">-->
+<!--                <div class="search">-->
+<!--                    <input type="text" class="search_text" id="search_text" placeholder="搜索你要的课程">-->
+<!--                    <input type="button" class="search_button" id="search_button" value="搜索">-->
+<!--                </div>-->
+<!--                <div class="login_no">-->
+<!--                    <a href="./login.html"><span>登录 | 注册</span></a>-->
+<!--                </div>-->
+<!--                <div class="login_yes">-->
+<!--                    <img src="http://pxebavmp1.bkt.clouddn.com/images/default_user_icon.png" id="login_yes_img"  alt="">-->
+<!--                    <div class="login_yes_h">-->
+<!--                        <div class="login_yes_h_hr"></div>-->
+<!--                        <div class="set">设置</div>-->
+<!--                        <div class="login_yes_h_hr"></div>-->
+<!--                        <div class="sign_out">退出</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </header>-->
+
+<!--    &lt;!&ndash;主体&ndash;&gt;-->
+<!--    <main>-->
+<!--        <div class="left">-->
+<!--            <div class="personal">&nbsp&nbsp个人资料</div>-->
+<!--            <div class="total">&nbsp&nbsp全部课程</div>-->
+<!--            <div class="collect">&nbsp&nbsp收藏的课程</div>-->
+<!--            <div class="on">&nbsp&nbsp未完成课程</div>-->
+<!--            <div class="over">&nbsp&nbsp已结束课程</div>-->
+<!--            <div class="account">&nbsp&nbsp账号设置</div>-->
+<!--        </div>-->
+<!--        <div class="col_split"></div>-->
+<!--        <div class="right">-->
+<!--            <div class="personal_content">-->
+<!--              <div class="personal_top">&nbsp&nbsp个人资料</div>-->
+<!--              <div class="split"></div>-->
+<!--              <div class="personal_bottom">-->
+<!--                  <div class="left" id="headers">-->
+<!--                      <img src="http://pxebavmp1.bkt.clouddn.com/images/default_user_icon.png" alt="not found" >-->
+<!--                      <div class="content">修改头像</div>-->
+<!--                  </div>-->
+<!--                  <div class="right">-->
+<!--                      <div class="top">-->
+<!--                          <div class="grade">-->
+<!--                              <p>积分</p>-->
+<!--                              <img src="./logo/my_integral.svg" alt="">-->
+<!--&lt;!&ndash;                              <p class="p01">235</p>&ndash;&gt;-->
+<!--                              <p class="p01"></p>-->
+<!--                          </div>-->
+<!--                          <div class="count">-->
+<!--                              <p>笔记</p>-->
+<!--                              <img src="./logo/my_note.svg" alt="">-->
+<!--&lt;!&ndash;                              <p class="p02">235</p>&ndash;&gt;-->
+<!--                              <p class="p02"></p>-->
+<!--                          </div>-->
+<!--                          <div class="time">-->
+<!--                              <p>学习时长</p>-->
+<!--                              <img src="./logo/my_studytime.svg" alt="">-->
+<!--                              <p id="study_time">235</p>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                      <div class="split"></div>-->
+<!--                      <div class="bottom">-->
+<!--                          <div class="mod" id="change">修改资料</div>-->
+<!--                          <ul class="self">-->
+<!--                              <li class="common">昵称:</li>-->
+<!--                              <li class="common">性别:</li>-->
+<!--                              <li class="common">身份:</li>-->
+<!--                              <li class="common">地址:</li>-->
+<!--                              <li class="common">简介:</li>-->
+<!--                          </ul>-->
+<!--                      </div>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="course_content">-->
+<!--                <div class="course_top">&nbsp&nbsp全部课程</div>-->
+<!--                <div class="split"></div>-->
+<!--                <div class="up">-->
+<!--                    <img src="logo/up.svg" alt="">-->
+<!--                </div>-->
+<!--                <div class="bottom" id="b02">-->
+
+<!--                </div>-->
+<!--                <div class="down">-->
+<!--                    <img src="logo/down.svg" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="collect_course">-->
+<!--                <div class="course_top">&nbsp&nbsp收藏课程</div>-->
+<!--                <div class="split"></div>-->
+<!--                <div class="bottom" id="b03">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="not_finished">-->
+<!--                <div class="course_top">&nbsp&nbsp未完成课程</div>-->
+<!--                <div class="split"></div>-->
+<!--                <div class="bottom" id="b04">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="finished">-->
+<!--                <div class="course_top">&nbsp&nbsp&nbsp已结束课程</div>-->
+<!--                <div class="split"></div>-->
+<!--                <div class="bottom" id="b05">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="install">-->
+<!--                <div class="course_top">&nbsp&nbsp&nbsp账号设置</div>-->
+<!--                <div class="split"></div>-->
+<!--                <div class="content">-->
+<!--                    <div class="now_account">-->
+<!--                        <label>&nbsp&nbsp&nbsp当前登录账号:&nbsp&nbsp&nbsp</label>-->
+<!--                        <span class="p03">无敌</span>-->
+<!--                    </div>-->
+<!--                    <div class="change">-->
+<!--                        <div class="change_telephone">-->
+<!--                            <span>&nbsp&nbsp&nbsp修改账号</span>-->
+<!--                        </div>-->
+<!--                        <div class="change_password">-->
+<!--                            <span>&nbsp&nbsp&nbsp修改密码</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="split"></div>-->
+<!--                <div class="content">-->
+<!--                    <div class="mail">-->
+<!--                        <div class="now_mail">-->
+<!--                            <label>&nbsp&nbsp&nbsp当前邮箱账号:&nbsp&nbsp&nbsp</label>-->
+<!--                            <span>1564156</span>-->
+<!--                        </div>-->
+<!--                        <div class="change_two">-->
+<!--                            <span>修改邮箱</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="split"></div>-->
+<!--                <div class="content" id="cons">-->
+<!--                    <div class="icon">-->
+<!--                        <div class="qq">-->
+<!--                            <img src="./logo/my_qq.svg" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="we_chat">-->
+<!--                            <img src="./logo/my_weixin.svg" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="wei_bo"><img src="./logo/my_weibo.svg" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="email"><img src="./logo/my_email.svg" alt="">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </main>-->
+<!--    &lt;!&ndash; 底部 &ndash;&gt;-->
+<!--    <footer></footer>-->
+<!--</div>-->
+<!--<script src="js/qiniu.min.js"></script>-->
+<!--<script src="js/ajax_util.js"></script>-->
+<!--<script src="js/0_config.js"></script>-->
+<!--<script src="js/my.js"></script>-->
+<!--</body>-->
+<!--</html>-->

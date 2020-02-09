@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>larkplayer quick start</title>
+    <link rel="stylesheet" href="css/video.css">
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <!--导航-->
+    <header>
+        <div class="header">
+            <div class="header_left">
+                <div class="video_return" id="video_return">
+                    <img src="./logo/video_return.svg" alt="">
+                </div>
+                <div class="video_title">
+                    <h3><!--1-1 30万条数据准备情况--></h3>
+                </div>
+            </div>
+            <div class="header_right">
+                <div class="search">
+                    <input type="text" class="search_text" id="search_text" placeholder="搜索你要的课程">
+                    <input type="button" class="search_button" id="search_button" value="搜索">
+                </div>
+                <div class="login_no">
+                    <a href="./login.html"><span>登录 | 注册</span></a>
+                </div>
+                <div class="login_yes">
+                    <img src="http://pxebavmp1.bkt.clouddn.com/images/default_user_icon.png" id="login_yes_img"  alt="">
+                    <div class="login_yes_h">
+                        <div class="login_yes_h_hr"></div>
+                        <div class="set">设置</div>
+                        <div class="login_yes_h_hr"></div>
+                        <div class="sign_out">退出</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 主体 -->
+
+    <main>
+        <div class="main_inner">
+            <!--***************模态框*******************************-->
+            <div class="panel" id="panel">
+                <div class="center">
+                    <div class="close_all" id="close">
+                        <img src="logo/modal_error.svg" alt="">
+                    </div>
+                    <h3>我要问答：</h3>
+                    <div class="content" id="content">
+                        <textarea name="content_eva" id="content_eva"></textarea>
+                    </div>
+                    <div class="btn_submit">
+                        <input type="button" value="发布内容"  class="btn_sub" id="btn_sub">
+                    </div>
+                </div>
+            </div>
+            <!--****************************************************-->
+            <div class="video_div">
+                <!--章节、点赞、问答-->
+                <div class="video_div_left">
+                    <div class="vdl_item" id="vdl_chapter">
+                        <img  src="./logo/chapter.svg" alt="" class="vdl_item_img">
+                    </div>
+                    <!--***************章节框*******************************-->
+                    <div class="chapter_panel">
+                        <div class="chapter_panel_inner"></div>
+                    </div>
+                    <!--****************************************************-->
+                    <div class="vdl_item" id="vdl_click">
+                        <img src="./logo/click_good.svg" alt="" class="vdl_item_img">
+                    </div>
+                    <div class="vdl_item" id="vdl_question" >
+                        <img src="./logo/question.svg" alt="" class="vdl_item_img">
+                    </div>
+                </div>
+
+<!--                &lt;!&ndash;***************模态框*******************************&ndash;&gt;-->
+<!--                <div class="panel" id="panel">-->
+<!--                    <div class="center">-->
+<!--                        <div class="close_all" id="close">-->
+<!--                            <img src="logo/modal_error.svg" alt="">-->
+<!--                        </div>-->
+<!--                        <h3>我要问答：</h3>-->
+<!--                        <div class="content" id="content">-->
+<!--                            <textarea name="content_eva" id="content_eva"></textarea>-->
+<!--                        </div>-->
+<!--                        <div class="btn_submit">-->
+<!--                            <input type="button" value="发布内容"  class="btn_sub" id="btn_sub">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash;****************************************************&ndash;&gt;-->
+
+
+                <!-- 视频 -->
+                <div id="video"></div>
+                <!-- 老师 -->
+                <div class="video_div_right">
+                    <div class="vdr_close">
+                        <img src="logo/error.svg" alt="">
+                    </div>
+                    <div class="vdr_top">
+                        <div class="vdr_top_img">
+<!--                            <img src="http://pxebavmp1.bkt.clouddn.com/images/B1.jpg" alt="">-->
+                            <img src="" alt="">
+                        </div>
+                        <div class="vdr_top_name">
+                            <h3><!--顾里--></h3>
+                            <p><!--算法工程师--></p>
+                        </div>
+                    </div>
+                    <div class="vdr_bottom">
+                        <p><!--深圳微埃智能科技有限公司人工智能算法总监（深度学习、时间序列预测、图像分割、目标检测）、联合创始人；金融二级市场量化分析师；精通python、深度学习算法开发 深圳市海外高层次人才、宝安区高层次人才； 澳大利亚新南威尔士大学博士--></p>
+                    </div>
+                </div>
+                <div class="video_div_right_hid">
+                    <img src="./logo/arrow.svg" alt="">
+                </div>
+
+            </div>
+            <div class="nav">
+                <div class="nav_inner">
+                    <ul>
+                        <li><a href="javascript:void 0" class="selected">问答</a></li>
+                        <li><a href="javascript:void 0" id="conmment">评论</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_bottom">
+                <div class="question">
+                    <div class="que_top">
+                        <button type="button" class="que_btn" id="que_btn">我要发布</button>
+                    </div>
+                    <div class="que_container">
+<!--                        <div class="que_article">-->
+<!--                            <div class="que_content">-->
+<!--                                <div class="que_icon">-->
+<!--                                    <img src="http://pxebavmp1.bkt.clouddn.com/images/B1.jpg" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="que_text">-->
+<!--                                    <h3>熊仔仔</h3>-->
+<!--                                    <p>我也是出现了这个问题，后面查了一下，是因为配置文件的问题，打开jar包同在的hanlp.properties，然后修改里面的root路径为你jar包现在所在的这个路径就行了</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="que_time">-->
+<!--                                <span>2019-01-01 19:09:09</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+                <div class="recommend">
+                    <h3>推荐课程</h3>
+<!--                    <div class="recommend_course">-->
+<!--                        <div class="img"></div>-->
+<!--                        <div class="text">-->
+<!--                            <p>算法与数据库结构</p>-->
+<!--                            <p>中级</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 尾部 -->
+    <footer></footer>
+
+</div>
+
+<script src="js/ajax_util.js"></script>
+<script src="js/0_config.js"></script>
+<script src="js/video.js"></script>
+<!--larkplayer插件-->
+<script src="https://unpkg.com/larkplayer@latest/dist/larkplayer.js"></script>
+<!-- 自定义样式插件 https://github.com/dblate/larkplayer-ui -->
+<script src="https://unpkg.com/larkplayer-ui@latest/dist/larkplayer-ui.js"></script>
+<script>
+
+    var width = Math.min(document.body.offsetWidth, 900);
+    var player=larkplayer('video',{
+        width:width,
+        // width:'100%',
+        height: width*9/16,
+        controls: true,
+        // src:  'https://baikebcs.bdimg.com/baike-other/big-buck-bunny.mp4'
+        // src:  'https://vd2.bdstatic.com/mda-ji3y8tex31emkdbz/sc/mda-ji3y8tex31emkdbz.mp4'
+    },function () {
+        console.log('ready...');
+    })
+
+
+
+</script>
+
+</body>
+</html>

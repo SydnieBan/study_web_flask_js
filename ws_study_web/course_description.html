@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程详情</title>
+    <link rel="stylesheet" href="css/course_description.css">
+
+
+</head>
+<body>
+<div class="container">
+    <!--导航-->
+    <header>
+        <div class="header">
+            <div class="header_left">
+                <div class="logo_img"><div></div></div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="./course.html">全部课程</a></li>
+                        <li><a href="./course_unique.html">精品课程 </a></li>
+                        <li><a href="./course_free.html">免费课程</a></li>
+                        <li><a href="./note.html">笔记专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_right">
+                <div class="search">
+                    <input type="text" class="search_text" id="search_text" placeholder="搜索你要的课程">
+                    <input type="button" class="search_button" id="search_button" value="搜索">
+                </div>
+                <div class="login_no">
+                    <a href="./login.html"><span>登录 | 注册</span></a>
+                </div>
+                <div class="login_yes">
+                    <img src="http://pxebavmp1.bkt.clouddn.com/images/default_user_icon.png"  id="login_yes_img" alt="">
+                    <div class="login_yes_h">
+                        <div class="login_yes_h_hr"></div>
+                        <div class="set">设置</div>
+                        <div class="login_yes_h_hr"></div>
+                        <div class="sign_out">退出</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--主体-->
+    <main>
+        <div class="top">
+            <div class="title" id="title_back">
+                <div class="title_inner">
+                    <div class="title_inner_top">
+                        <div class="title_inner_top_left">
+                            <ul id="nav_info">
+<!--                                <li><a href="">课程</a></li>-->
+<!--                                <li><span> \ </span></li>-->
+<!--                                <li><a href="">前端开发</a></li>-->
+<!--                                <li><span> \ </span></li>-->
+<!--                                <li><a href="">HTML/CSS</a></li>-->
+<!--                                <li><span> \ </span></li>-->
+<!--                                <li><a href="">初始HTML+CSS</a></li>-->
+                            </ul>
+                        </div>
+                        <div class="title_inner_top_right">
+                            <div class="collection" id="collection">
+                                <div class="c_img">
+                                    <img src="./logo/collection.svg" alt="">
+                                </div>
+                                <div class="c_text">收藏</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title_inner_main">
+                        <div class="tim_left" id="show_img">
+
+                        </div>
+                        <div class="tim_mid">
+                            <div class="tim_mid_top" id="min_top">
+<!--                                <h1>初识HTML+CSS</h1>-->
+                            </div>
+                            <div class="tim_mid_bottom">
+                                <table>
+                                    <tr>
+                                        <td id="difficult">
+<!--                                            难度：初级-->
+                                        </td>
+                                        <td id="learn_time">
+<!--                                            时长：9小时18分-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="select_num">
+<!--                                            学习人数：1059589-->
+                                        </td>
+                                        <td id="collect_num">
+<!--                                            收藏量：3059589-->
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tim_right" id="is_free">
+<!--                            <div class="course_teacher"></div>-->
+<!--                            <input type="button" value="进入学习" >-->
+<!--                            <input type="button" value="积分兑换" >-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="nav_inner">
+                    <ul id="work_list">
+                        <li id="course_video"><a href="javascript:void 0" class="a_style">视频章节</a></li>
+                        <li id="course_ware"><a href="javascript:void 0">课件章节</a></li>
+                        <li id="course_evaluate"><a href="javascript:void 0">用户评价</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="center">
+            <div class="center_inner">
+                <div class="ci_left">
+                    <div class="ci_left_introduce">
+                        <p id="introduce"></p>
+                        <input type="button" value="我要发布" class="btn_release" id="btn_release" >
+                    </div>
+
+<!--                    视频-->
+                    <div class="chapters" id="chapters"></div>
+<!--                    课件-->
+                    <div class="course_ware" id="ware"></div>
+<!--                    评论-->
+                    <div class="course_evaluate" id="evaluate">
+
+                    </div>
+                </div>
+
+                <div class="ci_right">
+                    <div class="ci_right_process">
+                        <div id="alr_learn">
+<!--                            <h2>已学0%</h2>-->
+<!--                            <meter max="100" min="0" value="30" style="border-radius: 20px;width:250px;"></meter>-->
+                        </div>
+<!--                        <progress max="100" value="30"></progress>-->
+                        <h3>课程须知</h3>
+                        <p id="notice"></p>
+<!--                        1、本课程面向一定编程基础的计算机专业、软件工程专业、通信专业、电子技术专业和自动化专业的学生。<br/>-->
+<!--                        2、本课程也适用于大数据从业者及人工智能相关工程人员。<br/>-->
+<!--                        3、任何有兴趣的同学均适合学习。<br/>-->
+                    </div>
+                    <div class="ci_right_recommend">
+                        <h3>推荐课程</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--底部-->
+    <footer class="end">
+        <div class="final">
+            <div class="final-left">
+                <div><h1><strong>LOGO</strong></h1></div>
+                <div>让每一名用户都能有所学，有所得..............</div>
+            </div>
+            <div class="final-right">
+                <div class="final-right-one">
+                    <div class="right-one">关于我们</div>
+                    <div class="right-two">
+                        <ul>
+                            <li>关于我们</li>
+                            <li>联系我们</li>
+                            <li>常见问题</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="final-right-two">
+                    <div>关注我们</div>
+                    <div class="final-right-img"><a href="https://wx.qq.com/"><img src="logo/微信.svg" alt="图片不存在"></a><a
+                            href="https://weibo.com"><img src="logo/weibo.svg" alt="图片不存在"></a>
+                    </div>
+                </div>
+                <div>友情链接</div>
+            </div>
+        </div>
+        <div class="end-bottom">
+            <span>粤B2-20090191-26  | 京ICP备12020869号-2 | 京公网安备44010602000207 </span><br/>
+            <span>©2014-2019 icourse163.org </span>
+        </div>
+    </footer>
+
+
+</div>
+<!--模态框-->
+<div class="panel" id="panel">
+    <div class="center">
+        <span class="close_all" id="close">×</span>
+        <div class="content" id="content">
+            <textarea name="content_eva" id="content_eva"></textarea>
+        </div>
+        <div class="btn_submit">
+            <input type="button" value="发布内容"  class="btn_sub" id="btn_sub">
+        </div>
+    </div>
+</div>
+
+<script src="js/ajax_util.js"></script>
+<script src="js/0_config.js"></script>
+<script src="js/course_description.js"></script>
+
+</body>
+</html>
